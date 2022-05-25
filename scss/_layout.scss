@@ -1,0 +1,98 @@
+.card {
+    text-align: center;
+    background-color: $dark-desaturated-blue;
+    width: 290px;
+    border-radius: $default-radius;
+    margin: 4rem 4rem;
+    overflow: hidden;
+
+    &__image {
+        background-color: $soft-violet;
+
+        &__img {
+            display: block;
+            mix-blend-mode: multiply;
+            opacity: 75%;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        padding: 3.5rem 2.5rem;
+
+        &__title {
+            color: $white;
+            margin-bottom: $default-margin;
+            line-height: $default-line-height;
+
+            &--highlight {
+                color: $soft-violet;
+            }
+        }
+
+        &__desc {
+            font-size: $default-font-size;
+            font-weight: 300;
+            line-height: 1.5;
+            color: $slightly-transparent-white-p;
+            margin-bottom: 3rem;
+        }
+
+        &__stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+
+            &__item {
+                &__number {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $white;
+                    margin-bottom: 0.5rem;
+                }
+
+                &__things {
+                    font-weight: 300;
+                    color: $slightly-transparent-white-h;
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .card {
+        display: flex;
+        width: 100rem;
+        text-align: start;
+
+        &__image {
+            order: 2;
+
+            &__img {
+                height: 100%;
+            }
+        }
+
+        &__text {
+            width: 70%;
+            padding: 6rem 8rem 6rem 5rem;
+
+            &__title {
+                font-size: 3rem;
+            }
+
+            &__desc {
+                margin-bottom: 6rem;
+            }
+
+            &__stats {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
